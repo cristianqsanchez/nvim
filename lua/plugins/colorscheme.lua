@@ -5,6 +5,8 @@ return {
 	priority = 1000,
 	config = function()
 		require('kanagawa').setup({
+      functionStyle = { bold = true },
+      keywordStyle = { italic = false },
 			overrides = function(colors) local theme = colors.theme
 				return {
 					Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 },
@@ -26,6 +28,11 @@ return {
 					NormalDark = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m3 },
           StatusLine = { bg = theme.ui.bg_p1 },
           StatusLineNC = { bg = theme.ui.bg_m1, fg = theme.ui.special },
+
+          DiagnosticVirtualTextError = { fg = theme.diag.error, bg = theme.ui.bg_m2 },
+          DiagnosticVirtualTextWarn = { fg = theme.diag.warning, bg = theme.ui.bg_m1 },
+          DiagnosticVirtualTextInfo = { fg = theme.diag.info, bg = theme.ui.bg_m1 },
+          DiagnosticVirtualTextHint = { fg = theme.diag.hint, bg = theme.ui.bg_m1 },
 
 					WhichKeyFloat = { bg = theme.ui.bg_m3 },
 
